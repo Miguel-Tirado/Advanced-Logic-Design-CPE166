@@ -1,0 +1,618 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Apr 24 13:25:47 2019
+# Process ID: 16680
+# Current directory: T:/Lab4_part1_new
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3628 T:\Lab4_part1_new\project_1.xpr
+# Log file: T:/Lab4_part1_new/vivado.log
+# Journal file: T:/Lab4_part1_new\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project T:/Lab4_part1_new/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Junior 2018/Spring 2018 semester/CPE 166/Lab 4/Part 1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open T:/Lab4_part1_new/project_1.srcs/sim_1/new/dff_tb.v w ]
+add_files -fileset sim_1 T:/Lab4_part1_new/project_1.srcs/sim_1/new/dff_tb.v
+update_compile_order -fileset sim_1
+set_property top dff [current_fileset]
+update_compile_order -fileset sources_1
+set_property top dff_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'dff_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj dff_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/dff_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot dff_tb_behav xil_defaultlib.dff_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.dff_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dff_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/dff_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/dff_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 13:56:35 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 13:56:35 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 832.605 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dff_tb_behav -key {Behavioral:sim_1:Functional:dff_tb} -tclbatch {dff_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source dff_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dff_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 832.605 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'dff_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj dff_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/dff_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot dff_tb_behav xil_defaultlib.dff_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 1 for port CE [T:/Lab4_part1_new/project_1.srcs/sim_1/new/dff_tb.v:28]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.dff_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot dff_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/dff_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/dff_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 13:59:33 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 13:59:33 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "dff_tb_behav -key {Behavioral:sim_1:Functional:dff_tb} -tclbatch {dff_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source dff_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'dff_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 868.648 ; gain = 33.070
+close [ open T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v w ]
+add_files T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v
+update_compile_order -fileset sources_1
+set_property top Datapath [current_fileset]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v w ]
+add_files -fileset sim_1 T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v
+update_compile_order -fileset sim_1
+set_property top ALU [current_fileset]
+update_compile_order -fileset sources_1
+set_property top ALU_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ALU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.ALU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/ALU_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 15:55:58 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 15:55:58 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_tb_behav -key {Behavioral:sim_1:Functional:ALU_tb} -tclbatch {ALU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source ALU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 871.773 ; gain = 0.000
+set_property top Datapath [current_fileset]
+update_compile_order -fileset sources_1
+set_property top Datapath_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+ERROR: [VRFC 10-91] w is not declared [T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v:45]
+ERROR: [VRFC 10-1040] module Datapath_tb ignored due to previous errors [T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+ERROR: [VRFC 10-91] w is not declared [T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v:45]
+ERROR: [VRFC 10-1040] module Datapath_tb ignored due to previous errors [T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Datapath_tb_behav xil_defaultlib.Datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2to1
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.mux_4to1
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.Datapath_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Datapath_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 16:05:34 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 16:05:34 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Datapath_tb_behav -key {Behavioral:sim_1:Functional:Datapath_tb} -tclbatch {Datapath_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source Datapath_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Datapath_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 884.074 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Datapath_tb_behav xil_defaultlib.Datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2to1
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.mux_4to1
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.Datapath_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Datapath_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 16:06:41 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 16:06:41 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Datapath_tb_behav -key {Behavioral:sim_1:Functional:Datapath_tb} -tclbatch {Datapath_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source Datapath_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Datapath_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 902.910 ; gain = 18.836
+add_wave {{/Datapath_tb/uut/u1/y}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Datapath_tb_behav xil_defaultlib.Datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2to1
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.mux_4to1
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.Datapath_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Datapath_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 16:27:20 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 16:27:20 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Datapath_tb_behav -key {Behavioral:sim_1:Functional:Datapath_tb} -tclbatch {Datapath_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source Datapath_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Datapath_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 902.910 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/ALU_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/dff_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:T:/Lab4_part1_new/project_1.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Datapath_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj Datapath_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/dff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_2to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sources_1/new/mux_4to1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4to1
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.srcs/sim_1/new/Datapath_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "T:/Lab4_part1_new/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto c376f06333ff44d4b9639b7d2e0107ae --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Datapath_tb_behav xil_defaultlib.Datapath_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2to1
+Compiling module xil_defaultlib.dff
+Compiling module xil_defaultlib.mux_4to1
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.Datapath_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Datapath_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'T:/Lab4_part1_new/project_1.sim/sim_1/behav/xsim.dir/Datapath_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 24 17:31:03 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 24 17:31:03 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'T:/Lab4_part1_new/project_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Datapath_tb_behav -key {Behavioral:sim_1:Functional:Datapath_tb} -tclbatch {Datapath_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source Datapath_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Datapath_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 902.910 ; gain = 0.000

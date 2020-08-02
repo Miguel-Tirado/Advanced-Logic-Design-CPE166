@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Apr 23 13:39:10 2019
+# Process ID: 15608
+# Current directory: E:/Junior 2018/Spring 2018 semester/CPE 166/Lab 4/Part 1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5268 E:\Junior 2018\Spring 2018 semester\CPE 166\Lab 4\Part 1\project_1.xpr
+# Log file: E:/Junior 2018/Spring 2018 semester/CPE 166/Lab 4/Part 1/vivado.log
+# Journal file: E:/Junior 2018/Spring 2018 semester/CPE 166/Lab 4/Part 1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Junior 2018/Spring 2018 semester/CPE 166/Lab 4/Part 1/project_1.xpr}
+update_compile_order -fileset sources_1
