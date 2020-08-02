@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Apr 16 12:04:39 2019
+# Process ID: 7672
+# Current directory: T:/Lab3_part3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13200 T:\Lab3_part3\Lab3_part3.xpr
+# Log file: T:/Lab3_part3/vivado.log
+# Journal file: T:/Lab3_part3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project T:/Lab3_part3/Lab3_part3.xpr
+update_compile_order -fileset sources_1
