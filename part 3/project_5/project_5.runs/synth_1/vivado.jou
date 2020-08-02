@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Feb 20 18:06:23 2019
+# Process ID: 18560
+# Current directory: T:/project_5/project_5.runs/synth_1
+# Command line: vivado.exe -log fpga_fun.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_fun.tcl
+# Log file: T:/project_5/project_5.runs/synth_1/fpga_fun.vds
+# Journal file: T:/project_5/project_5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fpga_fun.tcl -notrace
