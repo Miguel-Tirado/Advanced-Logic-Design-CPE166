@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/ADDER.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/FSM.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/MA.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/MB.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/MULT.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/MUXB.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/PROD.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sources_1/new/TOP.v"
+verilog xil_defaultlib  "../../../project_4.srcs/sim_1/new/TOP_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Mar 13 16:13:19 2019
+# Process ID: 5548
+# Current directory: T:/New New New/project_4/project_4.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: T:/New New New/project_4/project_4.runs/synth_1/TOP.vds
+# Journal file: T:/New New New/project_4/project_4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TOP.tcl -notrace
